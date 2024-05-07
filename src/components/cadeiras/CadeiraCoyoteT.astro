@@ -1,0 +1,33 @@
+---
+
+import { Image } from "astro:assets";
+import cadeira from "../../assets/cadeira-de-rodas-com-basculacao-coyote-t.jpg";
+import FormPopup from "../FormPopup.astro";
+const title = "Cadeira de Rodas com Basculação Coyote T";
+---
+
+<section class="quote">
+  <div class="container">
+    <div class="row g-5 p-5">
+
+      <div class="col-lg-6 col-sm-12" style="display:flex; align-items:center; justify-content:start;">
+        <Image src={cadeira} alt={title} loading="lazy" width={600} />
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <h1>{title}</h1>
+        <p class="mt-3">
+          A cadeira de rodas Coyote T é uma cadeira de rodas manual de alumínio que possui uma inclinação manual de 45°. Ela é projetada para fornecer aos usuários uma posição de assento confortável e personalizável, tornando-se uma escolha ideal para indivíduos que necessitam de suporte adicional ou alívio de pressão. O quadro de alumínio leve da cadeira facilita a manobra e o transporte. Seu sistema manual de inclinação no espaço permite ajustes precisos da posição do assento, proporcionando máximo conforto e suporte. O design inovador e as características práticas da cadeira de rodas Coyote T a tornam uma solução de mobilidade confiável e conveniente para indivíduos que necessitam de um sistema de inclinação no espaço.</p>
+          
+        <ul>
+          <li>Inclinação manual de 45º;</li>
+          <li>Quadro de alumínio leve;</li>
+          <li>Apoios de braço e pés ajustáveis.</li>
+        </ul>
+
+        <FormPopup title={title} />
+
+      </div>
+
+  </div>
+</section>

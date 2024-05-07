@@ -1,0 +1,44 @@
+---
+
+import { Image } from "astro:assets";
+import wazeLogo from "../assets/wazeLogo.png";
+import googleMapsLogo from "../assets/googleMapsLogo.png";
+
+---
+
+<section id="map" class="p-0 m-0">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 p-0">
+        <div class="map-overlay">
+          <div class="container">
+            <div class="row py-5">
+              <div class="col-12 text-center">
+                <h2 class="text-center">Venha nos visitar</h2>
+                <p class="text-center">Nosso showroom está localizado na Rua Francisco Marengo, 1376 - Tatuapé, São Paulo - SP, 03313-001</p>
+                
+                <a href="https://waze.com/ul?q=Rua%20Francisco%20Marengo%201476%20Tatuapé%20São%20Paulo%20Brasil" class="btn btn-primary btn-circle mt-4" style="background:#34ccff; border: none; border-radius:50px; padding:0.5rem 1.5rem;">
+                  
+                  <Image src={wazeLogo} alt="Waze" width="18" style={{ verticalAlign: "middle", marginTop: "-3px", marginRight: "5px" }} />
+
+                  Como chegar com Waze</a>
+
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Francisco+Marengo+1476+Tatuapé+São+Paulo+Brasil" class="btn btn-primary btn-circle mt-4" style="background:#aaa; border: none; border-radius:50px; padding:0.5rem 1.5rem; margin-left:1rem">
+                  
+                  <Image src={googleMapsLogo} alt="Google Maps" width="20" style={{ verticalAlign: "middle", marginTop: "-5px", marginRight: "7px" }} />
+                  
+                  Como chegar com Google Maps</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 p-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.5319497656906!2d-46.55743219680723!3d-23.54933107816342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e888efa4831%3A0xc6ed457d57beff3f!2sR.%20Francisco%20Marengo%2C%201376%20-%20Tatuap%C3%A9%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2003313-001!5e0!3m2!1spt-BR!2sbr!4v1715032031085!5m2!1spt-BR!2sbr" width="100%" height="600" style="border:0; vertical-align: bottom;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>

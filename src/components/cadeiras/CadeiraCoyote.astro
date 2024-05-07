@@ -1,0 +1,35 @@
+---
+
+import { Image } from "astro:assets";
+import cadeira from "../../assets/cadeira-de-rodas-dobravel-coyote.jpg";
+import FormPopup from "../FormPopup.astro";
+const title = "Cadeira de Rodas Dobrável Coyote";
+
+---
+
+<section class="quote">
+  <div class="container">
+    <div class="row g-5 p-5">
+
+      <div class="col-lg-6 col-sm-12" style="display:flex; align-items:center; justify-content:start;">
+        <Image src={cadeira} alt={title} loading="eager" width={600} />
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <h1>{title}</h1>
+        <p class="mt-3">A Loh Medical® Coyote é uma cadeira de rodas leve e dobrável com um ótimo preço. Oferece um eixo de liberação rápida, apoios de braços ajustáveis em altura, apoios de pés ajustáveis e um quadro de alumínio.</p>
+          
+        <ul>
+          <li>Quadro dobrável de alumínio leve;</li>
+          <li>Encosto ajustável em tensão;</li>
+          <li>Apoios de braço ajustáveis em altura;</li>
+          <li>Apoios de pés ajustáveis e removivéis;</li>
+          <li>Rodízios de 8" x 2"</li>
+        </ul>
+
+        <FormPopup title={title} />
+
+      </div>
+
+  </div>
+</section>

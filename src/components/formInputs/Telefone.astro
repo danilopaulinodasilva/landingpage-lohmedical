@@ -1,0 +1,7 @@
+---
+
+const { location } = Astro.props;
+const telefoneLocation = `telefone` + location;
+---
+
+<input type="text" required name={telefoneLocation} class="telefone-input form-control bg-white" id={telefoneLocation} placeholder="Telefone/WhatsApp">

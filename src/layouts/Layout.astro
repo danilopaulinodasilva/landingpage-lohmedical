@@ -1,0 +1,42 @@
+---
+
+import GoogleTagManagerBody from '../components/GoogleTagManagerBody.astro';
+import GoogleTagManagerHead from '../components/GoogleTagManagerHead.astro';
+import Modal from '../components/Modal.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&display=swap">
+		<GoogleTagManagerHead />
+	</head>
+	<body>
+		
+		<GoogleTagManagerBody />
+		<slot />
+		<Modal />
+
+		<script src="/src/utils/mask.js"></script>
+		<script src="/src/utils/validation.js"></script>
+		<script src="/src/utils/modal.js"></script>
+
+	</body>
+</html>
+
+<style is:global lang="scss">
+	@import '../scss/styles.scss';
+</style>

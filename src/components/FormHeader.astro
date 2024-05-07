@@ -1,0 +1,38 @@
+---
+
+import Telefone from '../components/formInputs/Telefone.astro';
+
+---
+
+<form method="POST" action="https://api2email-api.oofut8.easypanel.host/send/sendgrid/lohmedical/header" name="formHeader" id="formHeader" novalidate class="formHeader needs-validation">
+
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+      <div class="mb-3">
+        <input type="text" required name="nomeHeader" class="form-control bg-white" id="nomeHeader" placeholder="Nome completo">
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-sm-12">
+      <div class="mb-3">
+        <Telefone location="Header" />
+      </div>
+    </div>
+ 
+    <div class="col-12">
+      <div class="mb-3">
+        <input type="email" required name="emailHeader" class="form-control bg-white" id="emailHeader" title="seunome@dominio.com" pattern="^[^ ]+@[^ ]+\.[a-z]{2,63}$" placeholder="Email">
+      </div>
+    </div>
+   
+  </div>
+  
+  <div class="row">
+    <div class="col">
+      <div class="mb-3">
+        <textarea class="form-control bg-white" required name="mensagemHeader" id="mensagemHeader" rows="3" placeholder="Mensagem"></textarea>
+      </div>
+    </div>
+  </div>
+  <button type="submit" id="submitHeader" name="submitHeader" class="btn btn-primary px-3">Enviar mensagem</button>
+</form>

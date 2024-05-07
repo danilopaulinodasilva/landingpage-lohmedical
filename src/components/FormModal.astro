@@ -1,0 +1,48 @@
+---
+
+import Telefone from '../components/formInputs/Telefone.astro';
+
+---
+
+<form method="POST" action="https://api2email-api.oofut8.easypanel.host/send/sendgrid/lohmedical/modal" name="formOrcamento" id="formOrcamento" novalidate class="formOrcamento needs-validation">
+
+  <input type="hidden" id="modeloOrcamento" name="modeloOrcamento" value="" />
+
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-3">
+          <input type="text" required name="nomeOrcamento" class="form-control bg-white" id="nomeOrcamento" placeholder="Nome completo">
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-3">
+          <input type="email" required name="emailOrcamemnto" class="form-control bg-white" id="emailOrcamemnto" placeholder="Email">
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div class="mb-3">
+          <Telefone location="Orcamento" />
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <textarea class="form-control bg-white" required name="mensagemOrcamento" id="mensagemOrcamento" rows="4" placeholder="Tem dúvidas ou precisa de mais informações sobre o produto?"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+    <button type="submit" id="submitFormModal" name="submitFormModal" class="btn btn-primary">Enviar orçamento</button>
+  </div>  
+
+</form>

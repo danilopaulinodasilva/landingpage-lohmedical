@@ -1,0 +1,22 @@
+---
+
+import { Image } from 'astro:assets';
+import closeImg from '../assets/FontAwesome-Circle-Xmark-icon.png';
+import FormModal from './FormModal.astro';
+
+---
+
+<div class="modal fade" id="exampleModal" style="background-color: rgba(10, 64, 107, 0.8) !important;" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <!-- SVG como botão de fechamento -->
+        <button type="button" style="border:none; background:none;" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <Image alt="Fechar" width={40} style={{ marginTop: "-40px" }} src={closeImg} />
+        </button>
+      </div>
+      <FormModal />
+    </div>
+  </div>
+</div>

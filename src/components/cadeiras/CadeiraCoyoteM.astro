@@ -1,0 +1,33 @@
+---
+
+import { Image } from "astro:assets";
+import cadeira from "../../assets/cadeira-de-rodas-dobravel-coyote-m.jpg";
+import FormPopup from "../FormPopup.astro";
+const title = "Cadeira de Rodas Dobrável Coyote M";
+
+---
+
+<section class="quote">
+  <div class="container">
+    <div class="row g-5 p-5">
+
+      <div class="col-lg-6 col-sm-12" style="display:flex; align-items:center; justify-content:start;">
+        <Image src={cadeira} alt={title} loading="lazy" width={600} />
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <h1>{title}</h1>
+        <p class="mt-3">A cadeira de rodas Coyote M é uma solução de mobilidade robusta e confiável, projetada para acomodar indivíduos com uma capacidade máxima de peso de até 150 quilogramas. Construída com uma estrutura de aço durável, esta cadeira de rodas é projetada para resistir ao desgaste diário, tornando-se uma opção ideal para indivíduos que necessitam de uma cadeira resistente. A cadeira possui apoios de braço acolchoados confortáveis e um assento, bem como apoios de pés ajustáveis para maior conforto e suporte. Suas rodas grandes e pneus robustos proporcionam um passeio suave tanto em ambientes internos quanto externos, enquanto seus freios ajustáveis garantem segurança e controle. Com sua construção robusta e recursos práticos, a cadeira de rodas Coyote M é uma solução de mobilidade confiável e conveniente para indivíduos com requisitos de peso mais elevados.</p>
+          
+        <ul>
+          <li>Alta capacidade de peso;</li>
+          <li>Estrutura de aço durável;</li>
+          <li>Passeio suave.</li>
+        </ul>
+
+        <FormPopup title={title} />
+        
+      </div>
+
+  </div>
+</section>
