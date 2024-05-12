@@ -11,6 +11,7 @@ import FormFooter from '../components/FormFooter.astro';
 import Map from '../components/Map.astro';
 import { Image } from 'astro:assets';
 import WhatsAppLogo from '../assets/ws-logo-h.png';
+import WhatsApp from '../components/WhatsApp.astro';
 
 ---
 
@@ -61,7 +62,7 @@ import WhatsAppLogo from '../assets/ws-logo-h.png';
 
         <div class="row justify-content-center mt-5">
           <div class="col-lg-8">
-            <FormFooter />
+            <FormFooter page="Cadeiras de Rodas Motorizadas" />
           </div>
         </div>
 
@@ -70,6 +71,7 @@ import WhatsAppLogo from '../assets/ws-logo-h.png';
 
   <Map />
   <Footer />
+  <WhatsApp page="Cadeiras de Rodas Manuais" />
 
 </div>
 

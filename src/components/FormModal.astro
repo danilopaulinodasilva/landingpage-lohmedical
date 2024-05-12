@@ -1,5 +1,6 @@
 ---
 
+const { page } = Astro.props;
 import Telefone from '../components/formInputs/Telefone.astro';
 
 ---
@@ -7,6 +8,7 @@ import Telefone from '../components/formInputs/Telefone.astro';
 <form method="POST" action="https://api2email-api.oofut8.easypanel.host/send/sendgrid/lohmedical/modal" name="formOrcamento" id="formOrcamento" novalidate class="formOrcamento needs-validation">
 
   <input type="hidden" id="modeloOrcamento" name="modeloOrcamento" value="" />
+  <input type="hidden" id="page" name="page" value={page} />
 
   <div class="modal-body">
     <div class="row">

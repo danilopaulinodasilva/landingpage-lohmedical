@@ -1,5 +1,6 @@
 ---
 
+const { page } = Astro.props;
 import { Image } from 'astro:assets';
 import WhatsAppLogo from '../assets/ws-logo-h.png';
 import WhatsAppInput from '../components/formInputs/WhatsApp.astro';
@@ -38,6 +39,7 @@ import WhatsAppInput from '../components/formInputs/WhatsApp.astro';
         <form method="POST" action="https://api2email-api.oofut8.easypanel.host/send/sendgrid/lohmedical/whatsapp" name="formWhatsapp" id="formWhatsapp" novalidate class="formWhatsapp needs-validation">
 
           <input type="hidden" id="numberWhatsappModal" name="numberWhatsappModal" value="5511999999999" />
+          <input type="hidden" id="page" name="page" value={page} />
 
           <div class="form-group">
             <label for="nomeWhatsappModal" class="mb-2">Nome:</label>
