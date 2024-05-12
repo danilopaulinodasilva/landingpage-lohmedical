@@ -3,6 +3,7 @@
 import GoogleTagManagerBody from '../components/GoogleTagManagerBody.astro';
 import GoogleTagManagerHead from '../components/GoogleTagManagerHead.astro';
 import Modal from '../components/Modal.astro';
+import WhatsApp from '../components/WhatsApp.astro';
 
 interface Props {
 	title: string;
@@ -29,6 +30,7 @@ const { title } = Astro.props;
 		<GoogleTagManagerBody />
 		<slot />
 		<Modal />
+		<WhatsApp />
 
 		<script src="/src/utils/mask.js"></script>
 		<script src="/src/utils/validation.js"></script>

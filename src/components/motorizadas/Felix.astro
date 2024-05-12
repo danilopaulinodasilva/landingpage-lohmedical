@@ -1,0 +1,32 @@
+---
+
+import { Image } from "astro:assets";
+import cadeira from "../../assets/cadeira-de-rodas-motorizada-felix.jpg";
+import FormPopup from "../FormPopup.astro";
+const title = "Cadeira de Rodas Motorizada Felix";
+
+---
+
+<section class="quote">
+  <div class="container">
+    <div class="row g-5 p-5">
+
+      <div class="col-lg-6 col-sm-12" style="display:flex; align-items:center; justify-content:start;">
+        <Image src={cadeira} alt={title} loading="lazy" width={600} />
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <h1>{title}</h1>
+        <p class="mt-3">A cadeira de rodas motorizada dobrável Felix é a combinação perfeita de potência, portabilidade e estilo. Os motores duplos são controlados por um controlador PG e alimentados por uma caixa de bateria 2x 12V que pode ser facilmente removida para dobrar, armazenar e transportar.</p>
+          
+        <ul>
+          <li>Estrutura de Aço Dobrável;</li>
+          <li>Joystick PG.</li>
+        </ul>
+
+        <FormPopup title={title} />
+
+      </div>
+
+  </div>
+</section>

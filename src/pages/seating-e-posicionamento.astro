@@ -1,0 +1,76 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Logo from '../components/Logo.astro';
+import AlmofadaBasica from '../components/seating/AlmofadaBasica.astro';
+import AlmofadaGo from '../components/seating/AlmofadaGo.astro';
+import AlmofadaFusion from '../components/seating/AlmofadaFusion.astro';
+import FormFooter from '../components/FormFooter.astro';
+import Map from '../components/Map.astro';
+import { Image } from 'astro:assets';
+import WhatsAppSvg from '../assets/whatsapp.svg';
+
+---
+
+<Layout title="Cadeiras de Rodas Manuais - Loh Medical®">
+	
+  <div class="container-fluid p-0">
+
+	<header id="hero">
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-12 col-md-6 logo">
+            <Logo />
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5 p-5 cta">
+
+        <div class="col-12 py-5 text-center">
+          <h1>Seating e Posicionamento</h1>
+
+          <a href="#cadeiras" class="btn btn-primary px-3">Conhecer nossas almofadas</a>
+          <button data-bs-toggle="modal" data-bs-target="#whatsappModal" class="btn btn-primary whatsapp px-3"><Image width={16} style={{verticalAlign:'sub', marginRight:'4px'}} src={WhatsAppSvg} alt='WhatsApp' /> Falar no WhatsApp</button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <section id="cadeiras" class="mt-5">
+    <div class="container text-center">
+      <h2 class=" text-center">Conheça nossas opções de almofadas</h2>
+      <p>Conheça as opções de almofadas para cadeiras de rodas</p>
+    </div>
+  </section>
+
+  <AlmofadaBasica />
+  <AlmofadaGo />
+  <AlmofadaFusion />
+
+  <section id="contato" class="py-5">
+    <div class="container text-center">
+
+      <h2 class=" text-center">Entre em contato com nossa equipe comercial</h2>
+      <p>Ligue para <a href="tel:11991321853">(11) 99132-1853</a> ou envie uma mensagem pelo formulário abaixo:</p>
+
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-8">
+            <FormFooter />
+          </div>
+        </div>
+
+    </div>
+  </section>
+
+  <Map />
+  <Footer />
+
+</div>
+
+</Layout>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,0 +1,57 @@
+---
+
+import { Image } from 'astro:assets';
+import WhatsAppSvg from '../assets/whatsapp.svg';
+import WhatsAppLogo from '../assets/ws-logo-h.png';
+import WhatsApp from '../components/formInputs/WhatsApp.astro';
+
+---
+
+<div style={{
+  background: '#25d366',
+  borderRadius: '50%',
+  width: '50px',
+  height: '50px',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  position: 'fixed',
+  bottom: '15px',
+  left: '15px'
+}}>
+  <span data-bs-toggle="modal" data-bs-target="#whatsappModal" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', color: 'white', width: '100%', height: '100%' }}>
+      <Image src={WhatsAppSvg} alt="WhatsApp" width={28} />
+  </span>
+</div>
+
+<!-- Modal WhatsApp -->
+<div class="modal fade" id="whatsappModal" style="background-color: #128c7eaa;" tabindex="-1" role="dialog" aria-labelledby="whatsappModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="whatsappModalLabel">
+          <Image src={WhatsAppLogo} style="vertical-align: middle;" alt="WhatsApp" width={32} /> WhatsApp</h5>
+        <button type="button" class="close btn-close" data-bs-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="nomeWhatsappModal" class="mb-2">Nome:</label>
+            <input type="text" class="form-control mb-3" id="nomeWhatsappModal" name="nomeWhatsappModal">
+          </div>
+          <div class="form-group">
+            <label for="emailWhatsappModal" class="mb-2">Email:</label>
+            <input type="email" class="form-control mb-3" id="emailWhatsappModal" name="emailWhatsappModal">
+          </div>
+          <div class="form-group">
+            <label for="whatsappWhatsappModal" class="mb-2">Número do WhatsApp:</label>
+            <WhatsApp />
+          </div>
+          <button type="button" id="startWhatsappModal" class="btn btn-primary btn-lg btn-whatsapp mb-2">Iniciar Chat</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

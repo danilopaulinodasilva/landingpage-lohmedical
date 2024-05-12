@@ -11,3 +11,25 @@ exampleModal.addEventListener("show.bs.modal", function (event) {
   var modalInput = exampleModal.querySelector("#modeloOrcamento");
   modalInput.value = titleData;
 });
+
+var btnStartWhatsappModal = document.getElementById("startWhatsappModal");
+var nomeWhatsappModal = document.getElementById("nomeWhatsappModal").value;
+
+btnStartWhatsappModal.addEventListener("click", function () {
+  var mensagem = `Olá, me chamo ${nomeWhatsappModal} gostaria de mais informações`;
+  var url =
+    "https://api.whatsapp.com/send?phone=5511999999999&text=" +
+    encodeURIComponent(mensagem);
+  window.open(url, "_blank");
+});
+
+// Adicione um evento de clique ao botão de fechar do segundo modal
+document
+  .querySelector("#whatsappModal .close")
+  .addEventListener("click", function () {
+    var outroModal = document.getElementById("whatsappModal");
+    outroModal.classList.remove("show");
+    document.body.classList.remove("modal-open");
+    outroModal.removeAttribute("aria-modal");
+    outroModal.previousElementSibling.focus();
+  });

@@ -1,0 +1,32 @@
+---
+
+import { Image } from "astro:assets";
+import almofada from "../../assets/almofada-go.jpg";
+import FormPopup from "../FormPopup.astro";
+const title = "Almofada Go";
+
+---
+
+<section class="quote">
+  <div class="container">
+    <div class="row g-5 p-5">
+
+      <div class="col-lg-6 col-sm-12" style="display:flex; align-items:center; justify-content:start;">
+        <Image src={almofada} alt={title} loading="lazy" width={600} />
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <h1>{title}</h1>
+        <p class="mt-3">A almofade para cadeira de rodas JAY® GO apresenta uma construção de espuma de duas camadas com um design suave e ligeiramente contornado, e uma capa resistente à umidade Dartex®, ideal para usuários com baixo risco de lesão na pele que necessitam de estabilidade leve.</p>
+          
+        <ul>
+          <li>Base de Espuma de Duas Camadas e Ligeiramente Contornada;</li>
+          <li>Capa de Lycra® Revestida com Dartex®.</li>
+        </ul>
+
+        <FormPopup title={title} />
+
+      </div>
+
+  </div>
+</section>

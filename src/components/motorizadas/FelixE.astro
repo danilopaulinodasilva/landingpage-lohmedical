@@ -1,0 +1,35 @@
+---
+
+import { Image } from "astro:assets";
+import cadeira from "../../assets/cadeira-de-rodas-motorizada-felix-e.jpg";
+import FormPopup from "../FormPopup.astro";
+const title = "Cadeira de Rodas Motorizada Felix E";
+
+---
+
+<section class="quote">
+  <div class="container">
+    <div class="row g-5 p-5">
+
+      <div class="col-lg-6 col-sm-12" style="display:flex; align-items:center; justify-content:start;">
+        <Image src={cadeira} alt={title} loading="lazy" width={600} />
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <h1>{title}</h1>
+        <p class="mt-3">A Felix E é uma cadeira de rodas motorizada com dobra frontal, projetada para fácil transporte e armazenamento, com um quadro compacto e leve que pode ser dobrado em segundos. A cadeira possui um assento e encosto acolchoados confortáveis, apoios de pés ajustáveis e um motor potente que permite uma condução suave tanto em ambientes internos quanto externos. Com uma capacidade de peso de até 250 libras (110 kg), o Felix E é uma solução de mobilidade prática e conveniente para pessoas que necessitam de assistência com mobilidade e independência.
+        </p>
+          
+        <ul>
+          <li>Compacta e Portátil;</li>
+          <li>Potente;</li>
+          <li>Fácil de Usar;</li>
+          <li>Durável e Segura.</li>
+        </ul>
+
+        <FormPopup title={title} />
+
+      </div>
+
+  </div>
+</section>

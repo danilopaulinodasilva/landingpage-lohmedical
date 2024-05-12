@@ -4,55 +4,56 @@ import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
 import Logo from '../components/Logo.astro';
 import CadeiraCoyote from '../components/cadeiras/CadeiraCoyote.astro';
-import CadeiraCoyoteA from '../components/cadeiras/CadeiraCoyoteA.astro';
+import CadeiraCoyoteAco from '../components/cadeiras/CadeiraCoyoteAco.astro';
 import CadeiraCoyoteM from '../components/cadeiras/CadeiraCoyoteM.astro';
 import CadeiraCoyoteT from '../components/cadeiras/CadeiraCoyoteT.astro';
-import CadeiraCoyoteTPlus from '../components/cadeiras/CadeiraCoyoteTPlus.astro';
 import CadeiraQuickieIris from '../components/cadeiras/CadeiraQuickieIris.astro';
-import FormHeader from '../components/FormHeader.astro';
 import FormFooter from '../components/FormFooter.astro';
 import Map from '../components/Map.astro';
+import { Image } from 'astro:assets';
+import WhatsAppSvg from '../assets/whatsapp.svg';
 
 ---
 
-<Layout title="Cadeiras de Rodas - Loh Medical®">
+<Layout title="Cadeiras de Rodas Manuais - Loh Medical®">
 	
   <div class="container-fluid p-0">
 
 	<header id="hero">
     <div class="container">
-        <div class="col-sm-12 col-md-6 logo">
-          <Logo />
+      <div class="row">
+          <div class="col-sm-12 col-md-6 logo">
+            <Logo />
+          </div>
         </div>
+      </div>
+
+      <div class="row g-5 p-5 cta">
+
+        <div class="col-12 py-5 text-center">
+          <h1>Cadeiras de Rodas Manuais</h1>
+
+          <a href="#cadeiras" class="btn btn-primary px-3">Conhecer nossas cadeiras</a>
+          <button data-bs-toggle="modal" data-bs-target="#whatsappModal" class="btn btn-primary whatsapp px-3"><Image width={16} style={{verticalAlign:'sub', marginRight:'4px'}} src={WhatsAppSvg} alt='WhatsApp' /> Falar no WhatsApp</button>
+
+        </div>
+
       </div>
     </div>
   </header>
 
-  <section id="form" class="pb-0">
-    <div class="container">
-      <div class="row g-5 p-5">
-
-        <div class="col-lg-6 col-sm-12">
-          <h1>Cadeiras de Rodas</h1>
-          <p class="mt-3">A Loh Medical® oferece cadeiras de rodas adaptáveis, incluindo modelos semi-esportivos leves, opções dobráveis para fácil transporte e armazenamento, e cadeiras robustas para crianças, inspiradas em super-heróis.</p>
-
-        </div>
-
-        <div class="col-lg-6 col-sm-12">
-          <h3 style="margin-top:0px !important; color:#0a406b; font-size:1.6rem;">Solicite um orçamento</h3>
-          <FormHeader />
-        </div>
-
-      </div>
+  <section id="cadeiras" class="mt-5">
+    <div class="container text-center">
+      <h2 class=" text-center">Conheça nossas cadeiras de rodas manuais</h2>
+      <p>Conheça nossas cadeiras de rodas manuais, desenvolvidas para atender as necessidades de cada usuário.</p>
     </div>
   </section>
 
-  <CadeiraCoyote />
-  <CadeiraCoyoteA />
-  <CadeiraCoyoteM />
   <CadeiraCoyoteT />
-  <CadeiraCoyoteTPlus />
   <CadeiraQuickieIris />
+  <CadeiraCoyoteAco />
+  <CadeiraCoyoteM />
+  <CadeiraCoyote />
 
   <section id="contato" class="py-5">
     <div class="container text-center">

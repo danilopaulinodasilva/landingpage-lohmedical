@@ -1,0 +1,34 @@
+---
+
+import { Image } from "astro:assets";
+import cadeira from "../../assets/cadeira-de-rodas-motorizada-q300-m-mini.jpg";
+import FormPopup from "../FormPopup.astro";
+const title = "Cadeira de Rodas Motorizada Q300 M Mini";
+
+---
+
+<section class="quote">
+  <div class="container">
+    <div class="row g-5 p-5">
+
+      <div class="col-lg-6 col-sm-12" style="display:flex; align-items:center; justify-content:start;">
+        <Image src={cadeira} alt={title} loading="lazy" width={600} />
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <h1>{title}</h1>
+        <p class="mt-3">Vá onde outros não podem com a Q300 M Mini: a cadeira de rodas motorizada QUICKIE de verdadeira tração central mais estreita, com um raio de giro ultra pequeno de 17". Desfrute de um passeio seguro e confortável com suspensão patenteada em todas as rodas que amortece independentemente cada roda. Supere obstáculos de até 3" com rodas de tração de 12". Avance em terrenos difíceis com motores de 4 polos fortes e eficientes em energia. Além disso, a Q300 M Mini possui um sistema de assento multi-ajustável e uma ampla gama de opções de estilo.</p>
+          
+        <ul>
+          <li>A Evolução do Desempenho de Tração Central;</li>
+          <li>Tecnologia de Motores QUICKIE;</li>
+          <li>Elevação de Assento C-Me;</li>
+          <li>Controle na Ponta dos Seus Dedos.</li>
+        </ul>
+
+        <FormPopup title={title} />
+
+      </div>
+
+  </div>
+</section>

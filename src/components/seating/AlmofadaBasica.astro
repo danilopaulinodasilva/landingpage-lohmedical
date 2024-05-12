@@ -1,0 +1,33 @@
+---
+
+import { Image } from "astro:assets";
+import almofada from "../../assets/almofada-basica.jpg";
+import FormPopup from "../FormPopup.astro";
+const title = "Almofada Básica";
+
+---
+
+<section class="quote">
+  <div class="container">
+    <div class="row g-5 p-5">
+
+      <div class="col-lg-6 col-sm-12" style="display:flex; align-items:center; justify-content:start;">
+        <Image src={almofada} alt={title} loading="lazy" width={600} />
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <h1>{title}</h1>
+        <p class="mt-3">Fabricada com espuma de alta qualidade e resiliência, a Almofada Básica OneLoh oferece alívio eficaz da pressão, reduzindo o risco de lesões na pele e desconforto durante períodos prolongados de sentar. Ideal para pessoas que buscam uma solução de assento acessível, mas confiável, a Almofada para Cadeira de Rodas OneLoh Basic integra-se perfeitamente ao seu dia a dia, garantindo o máximo conforto sem comprometer a durabilidade. Seu design leve facilita o transporte e a adaptação em vários modelos de cadeira de rodas, enquanto a capa fácil de limpar e respirável garante higiene e conforto em qualquer ambiente.</p>
+          
+        <ul>
+          <li>Capa Fácil de Limpar;</li>
+          <li>Espuma de Alta Resiliência;</li>
+          <li>Contorno Pélvico.</li>
+        </ul>
+
+        <FormPopup title={title} />
+
+      </div>
+
+  </div>
+</section>

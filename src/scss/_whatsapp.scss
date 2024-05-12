@@ -1,0 +1,43 @@
+#whatsappModal .modal-content {
+  background-image: url("../assets/bgWhatsapp.png") !important;
+  background-size: cover;
+}
+
+#whatsappModal .modal-header {
+  background-color: #075e54;
+  display: flex;
+  justify-content: space-between;
+}
+
+#whatsappModal .modal-header {
+  h5 {
+    color: #ffffff !important;
+    font-weight: 400 !important;
+  }
+  img {
+    width: 32px;
+  }
+  button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+  }
+}
+
+#whatsappModal .modal-body {
+  .form-control {
+    background-color: #ffffff;
+    border: 1px solid #a99f95;
+    color: #323538;
+  }
+
+  .btn-whatsapp {
+    background-color: #128c7e;
+    border: none;
+  }
+  .btn-whatsapp:hover {
+    background-color: #075e54;
+  }
+}
