@@ -7,9 +7,13 @@ exampleModal.addEventListener("show.bs.modal", function (event) {
   // Atualizar o conteúdo do modal
   var modalTitle = exampleModal.querySelector(".modal-title");
   modalTitle.textContent = "Solicitando orçamento para " + titleData;
-  // Atualizasr o input hidden do modal
+  // Atualizar o input hidden do modal
   var modalInput = exampleModal.querySelector("#modeloOrcamento");
   modalInput.value = titleData;
+  // Atualizar o input hidden page
+  var pageInput = exampleModal.querySelector("#page");
+  var pageDate = button.getAttribute("data-bs-page");
+  pageInput.value = pageDate;
 });
 
 // var btnStartWhatsappModal = document.getElementById("startWhatsappModal");
