@@ -30,28 +30,27 @@ import Logo from '../components/Logo.astro';
 
     <script is:inline>
       // Função para decodificar o hash Base64 e redirecionar
-      function decodeBase64HashAndRedirect() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
+  function decodeBase64HashAndRedirect() {
+    const urlParams = new URLSearchParams(window.location.search);
 
-        // Obtém o valor do hash Base64 da query string
-        const hashBase64 = urlParams.get('hash');
+    // Obtém o valor do parâmetro 'hash' da query string
+    const hashBase64 = urlParams.get('hash');
 
-        if (!hashBase64) {
-          console.error('Hash Base64 não encontrado na query string.');
-          return;
-        }
+    if (!hashBase64) {
+      console.error('Hash Base64 não encontrado na query string.');
+      return;
+    }
 
-        // Decodifica o hash Base64 para obter a URL original
-        const decodedUrl = atob(hashBase64);
+    // Decodifica o hash Base64 para obter a URL original
+    const decodedUrl = atob(hashBase64);
 
-        // Redireciona para a URL original
-        window.location.replace(decodedUrl);
-      }
+    // Redireciona para a URL original
+    window.location.replace(decodedUrl);
+  }
 
-      // Chama a função ao carregar a página
-      window.onload = decodeBase64HashAndRedirect;
-    </script>
+  // Chama a função ao carregar a página
+  window.onload = decodeBase64HashAndRedirect;
+</script>
 
   <Footer />
 
