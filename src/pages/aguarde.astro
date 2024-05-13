@@ -29,26 +29,28 @@ import Logo from '../components/Logo.astro';
     </header>
 
     <script is:inline>
-      // Função para decodificar o hash Base64
-      function decodeBase64Hash() {
+      // Função para decodificar o hash Base64 e redirecionar
+      function decodeBase64HashAndRedirect() {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
 
-        // Itera sobre os parâmetros da query string para encontrar um hash Base64
-        for (let pair of urlParams.entries()) {
-          const decodedUrl = atob(pair[1]);
-          if (decodedUrl.startsWith('https://api.whatsapp.com')) {
-            // Redireciona para a URL original
-            window.location.replace(decodedUrl);
-            return;
-          }
+        // Obtém o valor do hash Base64 da query string
+        const hashBase64 = urlParams.get('hash');
+
+        if (!hashBase64) {
+          console.error('Hash Base64 não encontrado na query string.');
+          return;
         }
 
-        console.error('Hash Base64 correspondente à URL do WhatsApp não encontrado na query string.');
+        // Decodifica o hash Base64 para obter a URL original
+        const decodedUrl = atob(hashBase64);
+
+        // Redireciona para a URL original
+        window.location.replace(decodedUrl);
       }
 
       // Chama a função ao carregar a página
-      window.onload = decodeBase64Hash;
+      window.onload = decodeBase64HashAndRedirect;
     </script>
 
   <Footer />
