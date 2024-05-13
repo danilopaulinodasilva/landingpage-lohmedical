@@ -1,0 +1,33 @@
+---
+
+import { Image } from "astro:assets";
+import almofada from "../../assets/almofada-easy.jpg";
+import FormPopup from "../FormPopup.astro";
+const title = "Almofada Easy";
+
+---
+
+<section class="quote">
+  <div class="container">
+    <div class="row g-5 p-5">
+
+      <div class="col-lg-6 col-sm-12" style="display:flex; align-items:center; justify-content:start;">
+        <Image src={almofada} alt={title} loading="lazy" width={600} />
+      </div>
+
+      <div class="col-lg-6 col-sm-12">
+        <h1>{title}</h1>
+        <p class="mt-3">A JAY® Easy™ é uma almofada de cadeira de rodas de ótimo custo-benefício com fluido JAY Flow para proteção da pele e posicionamento. A almofada Easy™ possui uma base de espuma contornada de alta resiliência que se adapta a uma superfície de assento curva ou plana e um tri-pad de fluido JAY Flow™.</p>
+          
+        <ul>
+          <li>Base de Espuma Contornada com Fundo Curvo Opcional;</li>
+          <li>Inserção de Fluido JAY Flow™;</li>
+          <li>Capa Resistente à Umidade com Fundo Antideslizante.</li>
+        </ul>
+
+        <FormPopup title={title} page="Seating e Posicionamento" />
+
+      </div>
+
+  </div>
+</section>
