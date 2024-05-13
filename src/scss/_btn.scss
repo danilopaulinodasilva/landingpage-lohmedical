@@ -6,15 +6,15 @@
   background-image: none; // Remove the gradient
 
   &.whatsapp {
-    background-color: #25d366;
-    border-color: #25d366;
+    background-color: #2bb640;
+    border-color: #2bb640;
   }
 
   &.whatsapp:hover,
   &.whatsapp:focus,
   &.whatsapp:active {
-    background-color: lighten($color: #25d366, $amount: 10);
-    border-color: lighten($color: #25d366, $amount: 10);
+    background-color: lighten($color: #2bb640, $amount: 10);
+    border-color: lighten($color: #2bb640, $amount: 10);
   }
 
   &:hover,
