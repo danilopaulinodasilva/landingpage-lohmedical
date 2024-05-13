@@ -28,6 +28,29 @@ import Logo from '../components/Logo.astro';
       </div>
     </header>
 
+    <script is:inline>
+      // Função para decodificar o hash Base64
+      function decodeBase64Hash() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        // Itera sobre os parâmetros da query string para encontrar um hash Base64
+        for (let pair of urlParams.entries()) {
+          const decodedUrl = atob(pair[1]);
+          if (decodedUrl.startsWith('https://api.whatsapp.com')) {
+            // Redireciona para a URL original
+            window.location.replace(decodedUrl);
+            return;
+          }
+        }
+
+        console.error('Hash Base64 correspondente à URL do WhatsApp não encontrado na query string.');
+      }
+
+      // Chama a função ao carregar a página
+      window.onload = decodeBase64Hash;
+    </script>
+
   <Footer />
 
 </div>
