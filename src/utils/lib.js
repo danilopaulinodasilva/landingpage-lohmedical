@@ -19,9 +19,11 @@ function isMail() {
 }
 
 function addUrlToInput() {
-  var urlInput = document.querySelector('input[name="url"]');
-  if (urlInput) {
-    urlInput.value = window.location.href;
+  var urlInputs = document.querySelectorAll('input[name="url"]');
+  if (urlInputs) {
+    urlInputs.forEach(function (input) {
+      input.value = window.location.href;
+    });
   }
 }
 
