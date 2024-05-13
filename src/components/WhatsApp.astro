@@ -4,7 +4,7 @@ const { page } = Astro.props;
 import { Image } from 'astro:assets';
 import WhatsAppLogo from '../assets/ws-logo-h.png';
 import WhatsAppInput from '../components/formInputs/WhatsApp.astro';
-
+const url = window.location.href;
 ---
 
 <div style={{
@@ -40,6 +40,7 @@ import WhatsAppInput from '../components/formInputs/WhatsApp.astro';
 
           <input type="hidden" id="numberWhatsappModal" name="numberWhatsappModal" value="5511999999999" />
           <input type="hidden" id="page" name="page" value={page} />
+          <input type="hidden" id="url" name="url" value={url} />
 
           <div class="form-group">
             <label for="nomeWhatsappModal" class="mb-2">Nome:</label>
