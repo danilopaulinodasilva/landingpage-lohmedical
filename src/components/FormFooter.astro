@@ -2,14 +2,13 @@
 
 const { page } = Astro.props;
 import Telefone from '../components/formInputs/Telefone.astro';
-const url = window.location.href;
 
 ---
 
 <form method="POST" action="https://api2email-api.oofut8.easypanel.host/send/sendgrid/lohmedical/footer" name="formFooter" id="formFooter" class="formFooter">
 
   <input type="hidden" id="page" name="page" value={page} />
-  <input type="hidden" id="url" name="url" value={url} />
+  <input type="hidden" id="url" name="url" />
 
   <div class="row">
 

@@ -2,7 +2,6 @@
 
 const { page } = Astro.props;
 import Telefone from '../components/formInputs/Telefone.astro';
-const url = window.location.href;
 
 ---
 
@@ -10,7 +9,7 @@ const url = window.location.href;
 
   <input type="hidden" id="modeloOrcamento" name="modeloOrcamento" value="" />
   <input type="hidden" id="page" name="page" value={page} />
-  <input type="hidden" id="url" name="url" value={url} />
+  <input type="hidden" id="url" name="url" />
 
   <div class="modal-body">
     <div class="row">

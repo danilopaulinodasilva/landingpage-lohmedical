@@ -17,3 +17,12 @@ function isMail() {
   console.log("Using isMail()");
   addHiddenInput("mail");
 }
+
+function addUrlToInput() {
+  var urlInput = document.querySelector('input[name="url"]');
+  if (urlInput) {
+    urlInput.value = window.location.href;
+  }
+}
+
+addUrlToInput();
