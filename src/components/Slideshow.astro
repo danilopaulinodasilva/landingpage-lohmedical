@@ -1,0 +1,69 @@
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="https://lohmedical.com/sites/default/files/2023-12/JohanaCuencaTestimonial.png">
+        </div>
+        <div class="col">
+            <h5>Johana Cuenca <span>Cuidadora</span></h5>
+            <h3>A melhor realização de sonhos</h3>
+            <p>Loh Medical pode ser definida do início ao fim como: Qualidade humana, compromisso, melhor, dedicação com o que fazem paixão e excelência. Tornando-se os melhores realizando sonhos!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="https://lohmedical.com/sites/default/files/2023-12/AnaMariaOrozcoTestimonial.png">
+        </div>
+        <div class="col">
+            <h5>Ana María Orozco <span>Fisioterapeuta</span></h5>
+            <h3>Posicionando corretamente nossos pacientes</h3>
+            <p>Loh Medical é um aliado estratégico, pois sempre podemos contar com seus produtos de alta qualidade que oferecem uma variedade de ajustes para posicionar corretamente nossos pacientes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="https://lohmedical.com/sites/default/files/2023-12/KetlinMcDanielTestimonial.png">
+        </div>
+        <div class="col">
+            <h5>Ketlin McDaniel <span>Usuário</span></h5>
+            <h3>[Loh Medical] Muda a vida de um a um milhão</h3>
+            <p>Obrigado à Loh Medical por nos facilitar na América Latina este tipo de produtos que sem dúvida mudam a vida de um a um milhão.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script is:inline>
+
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change image every 3 seconds
+  }
+
+</script>

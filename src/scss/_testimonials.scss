@@ -1,0 +1,65 @@
+section#testimonials {
+  color: #ffffff;
+  background-color: #0a406b !important;
+
+  .slideshow-container {
+    max-width: 1000px !important;
+    background: url("https://www.lohmedical.com/themes/medical/images/Marco.png")
+      no-repeat right bottom;
+    position: relative;
+    margin: auto;
+
+    @media screen and (max-width: 1024px) {
+      .col:first-child {
+        padding: 2rem 8rem;
+      }
+
+      background: none !important;
+    }
+  }
+
+  .col {
+    /* border: 1px solid red !important; */
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .col h5 {
+    font-size: 1.7rem;
+    color: lighten($color: #0f4b99, $amount: 10) !important;
+  }
+
+  .col h5 span {
+    color: #cccccc;
+    font-size: 1.1rem;
+    font-weight: normal;
+  }
+
+  .col h3 {
+    color: #ffffff !important;
+    margin: 1rem 0;
+    text-transform: uppercase;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
