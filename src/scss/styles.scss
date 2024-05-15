@@ -21,8 +21,14 @@ p {
   color: #999999;
 }
 
+body,
+html {
+  overflow-x: hidden !important;
+}
+
 body {
   padding: 0;
+  margin: 0 !important;
 }
 
 $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);

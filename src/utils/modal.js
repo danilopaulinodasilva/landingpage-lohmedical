@@ -15,3 +15,13 @@ exampleModal.addEventListener("show.bs.modal", function (event) {
   var pageDate = button.getAttribute("data-bs-page");
   pageInput.value = pageDate;
 });
+
+var whatsappModal = document.getElementById("whatsappModal");
+whatsappModal.addEventListener("show.bs.modal", function (event) {
+  console.log(event);
+  // Atualizar o input hidden modelo
+  var button = event.relatedTarget;
+  var modeloInput = whatsappModal.querySelector("#modelo");
+  var modeloData = button.getAttribute("data-bs-title");
+  modeloInput.value = modeloData;
+});

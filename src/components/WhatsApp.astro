@@ -1,23 +1,12 @@
 ---
 
-const { page } = Astro.props;
+const { page, title } = Astro.props;
 import { Image } from 'astro:assets';
 import WhatsAppLogo from '../assets/ws-logo-h.png';
 import WhatsAppInput from '../components/formInputs/WhatsApp.astro';
 ---
 
-<div style={{
-  background: '#2bb640',
-  borderRadius: '50%',
-  width: '50px',
-  height: '50px',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  position: 'fixed',
-  bottom: '15px',
-  right: '15px'
-}}>
+<div id="whatsappBotao">
   <span data-bs-toggle="modal" id="whatsappBtn" data-bs-target="#whatsappModal" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', color: 'white', width: '100%', height: '100%' }}>
       <Image src={WhatsAppLogo} alt="WhatsApp" width={28} />
   </span>
@@ -40,6 +29,7 @@ import WhatsAppInput from '../components/formInputs/WhatsApp.astro';
           <input type="hidden" id="numberWhatsappModal" name="numberWhatsappModal" value="5511991370208" />
           <input type="hidden" id="page" name="page" value={page} />
           <input type="hidden" id="url" name="url" />
+          <input type="hidden" id="modelo" name="modelo" />
 
           <div class="form-group">
             <label for="nomeWhatsappModal" class="mb-2">Nome:</label>

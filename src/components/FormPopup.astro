@@ -1,7 +1,10 @@
 ---
 
 const { title, page } = Astro.props; 
+import { Image } from 'astro:assets';
+import WhatsAppLogo from '../assets/ws-logo-h.png';
 
 ---
 
 <button type="button" class="btn btn-lg btn-primary mt-3" data-bs-page={page} data-bs-toggle="modal" data-bs-title={title} data-bs-target="#exampleModal">Solicitar Orçamento</button>
+<button type="button" class="btn btn-lg btn-primary mt-3" data-bs-page={page} data-bs-toggle="modal" data-bs-title={title} data-bs-target="#whatsappModal" style="background:#2bb640; border:none"><Image src={WhatsAppLogo} alt="WhatsApp" width={20} /> Falar no WhatsApp</button>
