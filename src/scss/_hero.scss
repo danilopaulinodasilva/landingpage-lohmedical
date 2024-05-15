@@ -3,10 +3,26 @@ header#hero {
   background-position: center center;
   background-size: cover;
   border-top: 5px solid #0f4b99;
+  background-image: url("../assets/CoyoteDuotone.jpg");
   height: 70vh;
-  background-image: url("../assets/CoyoteDuotone.jpg") !important;
   display: flex;
   flex-direction: column;
+
+  &.hero__manuais {
+    background-image: url("../assets/CoyoteDuotone.jpg") !important;
+  }
+
+  &.hero__scooters {
+    background-image: url("../assets/LimosaDuotone.jpg") !important;
+  }
+
+  &.hero__motorizadas {
+    background-image: url("../assets/FelixEduotone.jpg") !important;
+  }
+
+  &.hero___seating {
+    background-image: url("../assets/CushionDuotone.jpg") !important;
+  }
 
   .logo {
     height: 100px; /* altura fixa desejada */
