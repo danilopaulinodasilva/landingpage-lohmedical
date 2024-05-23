@@ -31,6 +31,19 @@ body {
   margin: 0 !important;
 }
 
+.cadeiras-list,
+.scooters-list,
+.almofadas-list {
+  visibility: hidden;
+}
+
+.cadeiras-list li,
+.scooters-list li,
+.almofadas-list li {
+  height: 0px;
+  width: 0px;
+}
+
 $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 
 // Include functions first
